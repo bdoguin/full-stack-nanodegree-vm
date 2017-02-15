@@ -1,4 +1,4 @@
-Introduction
+## Introduction
 This project uses a Python module that uses the PostgreSQL database to keep track of players and matches in a game tournament. This project is part of the Udacity Full Stack Nanodegree Program. It is designed to show competency in creating and using databases through the use of database schemas and how to manipulate data inside of the database.
 
 This project has 3 parts:
@@ -53,7 +53,7 @@ Once it is up and running, type vagrant ssh to log into it. This will log your t
 
 $ vagrant ssh
 
-If you’d like to see what was installed in the VM, look in /vagrant/pg_config.sh.
+If youï¿½d like to see what was installed in the VM, look in /vagrant/pg_config.sh.
 
 Create the database:
 The Vagrant VM has PostgreSQL installed and configured, as well as the psql command line interface (CLI), so that you don't have to install or configure them on your local machine. The very first time we start working on this project, no database will exist - so first, we'll need to create the SQL database for our tournament project
@@ -76,7 +76,7 @@ vagrant@vagrant-ubuntu-trusty-32:/vagrant/tournament$ python tournament_test.py
 
 Example of a 16 Player Swiss Tournament:
 First round pairing is by random draw. For example, with 16 players they would be matched into 8 random pairs for the first round. For now, assume all games have a winner, and there are no draws.
-After the first round, there will be a group of 8 players with a score of 1 (win), and a group of 8 players with a score of 0 (loss). For the 2nd round, players in each scoring group will be paired against each other – 1’s versus 1’s and 0’s versus 0’s.
+After the first round, there will be a group of 8 players with a score of 1 (win), and a group of 8 players with a score of 0 (loss). For the 2nd round, players in each scoring group will be paired against each other ï¿½ 1ï¿½s versus 1ï¿½s and 0ï¿½s versus 0ï¿½s.
 
 After round 2, there will be three scoring groups:
 4 players who have won both games and have 2 points
@@ -89,9 +89,9 @@ Again, for round 3, players are paired with players in their scoring group. Afte
 6 players with 1 win (1 point)
 2 players with no wins (0 points)
 
-For the fourth (and in this case final) round, the process repeats, and players are matched with others in their scoring group. Note that there are only 2 players who have won all of their games so far – they will be matched against each other for the "championship" game. After the final round, we’ll have something that looks like this:
-1 player with 4 points – the winner!
-4 players with 3 points – tied for second place
+For the fourth (and in this case final) round, the process repeats, and players are matched with others in their scoring group. Note that there are only 2 players who have won all of their games so far ï¿½ they will be matched against each other for the "championship" game. After the final round, weï¿½ll have something that looks like this:
+1 player with 4 points ï¿½ the winner!
+4 players with 3 points ï¿½ tied for second place
 6 players with 2 points
 4 players with 1 point
 1 player with 0 points
