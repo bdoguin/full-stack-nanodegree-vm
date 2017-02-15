@@ -11,7 +11,7 @@ This project uses a **Python** module that uses the **PostgreSQL** database to k
 
 - **tournament.sql**  - this file is used to set up the database schema (the table representation of the data structure).
 - **tournament.py** - this file is used to provide access to the database via a library of functions which can add, delete or query data in the database to another python program (a client program).
-- **tournament_test.py** - this is a client program which will use functions written in the tournament.py module. This client program tests the implementation of functions in **tournament.py**
+- **tournament_test.py** - this is a client program which will use functions written in the **tournament.py** module. This client program tests the implementation of functions in **tournament.py**
 
 ## Installation
 
