@@ -1,10 +1,13 @@
+# Swiss Tournament Results Project
 ## Introduction
 This project uses a Python module that uses the PostgreSQL database to keep track of players and matches in a game tournament. This project is part of the Udacity Full Stack Nanodegree Program. It is designed to show competency in creating and using databases through the use of database schemas and how to manipulate data inside of the database.
 
-This project has 3 parts:
-1. Defining the database schema (SQL table definitions) in tournamenet.sql
-2. Writing Python code that will use it to track a Swiss tournament in tournament.py
+### This project has 3 parts:
+1. Defining the database schema (SQL table definitions) in **tournamenet.sql**
+2. Writing Python code that will use it to track a Swiss tournament in **tournament.py**
 3. A test script, tournament_test.py, has been included to test tournamenet.py
+4. 
+test.py
 
 Understanding the purpose of each file
 
