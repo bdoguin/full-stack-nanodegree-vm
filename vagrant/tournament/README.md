@@ -5,7 +5,7 @@ This project uses a **Python** module that uses the **PostgreSQL** database to k
 ### This project has 3 parts:
 1. Defining the database schema (SQL table definitions) in **tournamenet.sql**
 2. Writing Python code that will use it to track a Swiss tournament in **tournament.py**
-3. A test script, tournament_test.py, has been included to test **tournamenet.py**
+3. A test script, **tournament_test.py**, has been included to test **tournamenet.py**
 
 ### Understanding the purpose of each file
 
@@ -28,17 +28,17 @@ VirtualBox is the software that actually runs the VM. Install the platform packa
 Download Virtual Box: https://www.virtualbox.org/wiki/Downloads
 
 #### Vagrant
-Vagrant is the software that configures the VM and lets you share files between your host computer and the VM's filesystem.  Install the version for your operating system. Windows Note: The Installer may ask you to grant network permissions to Vagrant or make a firewall exception. Be sure to allow this.
+Vagrant is the software that configures the VM and lets you share files between your host computer and the VM's filesystem.  Install the version for your operating system. **Windows Note:** The Installer may ask you to grant network permissions to Vagrant or make a firewall exception. Be sure to allow this.
 Download Vagrant: https://www.vagrantup.com/downloads.html
 
 ### Use Git/Github to fetch the VM Configuration
 
-Windows: Use the Git Bash program (installed with Git) to get a Unix-style terminal. Make sure to run as administrator. Other systems: Use your favorite terminal program.
+**Windows:** Use the Git Bash program (installed with Git) to get a Unix-style terminal. Make sure to run as administrator. **Other systems:** Use your favorite terminal program.
 
 1. Go here: https://github.com/bdoguin/full-stack-nanodegree-vm
-2. Fork the repository (Click Fork in the top-right corner)
-3. Now we want to clone the newly forked repository to your computer. We will want to use the HTTPS method of cloning. Click Clone or download and then the clipboard icon to copy the repo's path.
-4. Then from the terminal, run: git clone PASTE_PATH_TO_REPO_HERE swisstournament
+2. Fork the repository (Click **Fork** in the top-right corner)
+3. Now we want to clone the newly forked repository to your computer. We will want to use the HTTPS method of cloning. Click **Clone or download** and then the **clipboard icon** to copy the repo's path.
+4. Then from the terminal, run: `git clone PASTE_PATH_TO_REPO_HERE fullstack`
 
 This will give you a directory named swisstournament. Note: you will want to paste the path you copied from step 3 into PASTE_PATH_TO_REPO_HERE.
 
