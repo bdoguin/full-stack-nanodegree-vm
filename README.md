@@ -1,4 +1,3 @@
-rdb-fullstack
-=============
+# Full Stack Nanodegree 
 
-Common code for the Relational Databases and Full Stack Fundamentals courses
+This is a repository for use with the Udacity fullstack nano degree program. README files for individual projects are located in their directories under the vagrant directory.
