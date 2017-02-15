@@ -32,7 +32,6 @@ Vagrant is the software that configures the VM and lets you share files between 
 Download Vagrant: https://www.vagrantup.com/downloads.html
 
 ### Use Git/Github to fetch the VM Configuration
-
 **Windows:** Use the Git Bash program (installed with Git) to get a Unix-style terminal. Make sure to run as administrator. **Other systems:** Use your favorite terminal program.
 
 1. Go here: https://github.com/bdoguin/full-stack-nanodegree-vm
@@ -40,54 +39,47 @@ Download Vagrant: https://www.vagrantup.com/downloads.html
 3. Now we want to clone the newly forked repository to your computer. We will want to use the HTTPS method of cloning. Click **Clone or download** and then the **clipboard icon** to copy the repo's path.
 4. Then from the terminal, run: `git clone PASTE_PATH_TO_REPO_HERE fullstack`
 
-This will give you a directory named swisstournament. Note: you will want to paste the path you copied from step 3 into PASTE_PATH_TO_REPO_HERE.
+This will give you a directory named **fullstack**. **Note:** you will want to paste the path you copied from step 3 into `PASTE_PATH_TO_REPO_HERE`.
 
-Run the Virtual Machine
-Using the terminal, change directory to swisstournament/vagrant (cd swisstournament/vagrant), then type vagrant up to launch your virtual machine. 
+### Run the Virtual Machine
+Using the terminal, change directory to fullstack/vagrant (`cd swisstournament/vagrant`), then type `vagrant up` to launch your virtual machine. 
 
-Once it is up and running, type vagrant ssh to log into it. This will log your terminal in to the virtual machine, and you'll get a Linux shell prompt.
+Once it is up and running, type `vagrant ssh` to log into it. This will log your terminal in to the virtual machine, and you'll get a Linux shell prompt. When you want to log out, type exit at the shell prompt.  To turn the virtual machine off (without deleting anything), type vagrant halt. If you do this, you'll need to run vagrant up again before you can log into it.
 
-$ vagrant ssh
+If you would like to see what was installed in the VM, look in **/vagrant/pg_config.sh**.
 
-If you�d like to see what was installed in the VM, look in /vagrant/pg_config.sh.
-
-Create the database:
+### Create the database:
 The Vagrant VM has PostgreSQL installed and configured, as well as the psql command line interface (CLI), so that you don't have to install or configure them on your local machine. The very first time we start working on this project, no database will exist - so first, we'll need to create the SQL database for our tournament project
 
-Navigate to the tournamenet directory with
-vagrant@vagrant-ubuntu-trusty-32:/vagrant$ cd /vagrant/tournament
+1. Navigate to the tournamenet directory with
+`vagrant@vagrant-ubuntu-trusty-32:/vagrant$ cd /vagrant/tournament`
+2. Open psql with
+`vagrant@vagrant-ubuntu-trusty-32:/vagrant/tournament$ psql`
+3. Build and access the database with
+`vagrant=> \i tournament.sql`
+4. Quit psql with 
+`tournament-> \q`
 
-Open psql with
-vagrant@vagrant-ubuntu-trusty-32:/vagrant/tournament$ psql
+### Run the test script:
+This code comes with a test script **tournamenet_test.py** that checks the database created with tournament.sql and the functions created in **tournament.py**.
+1. Run tournamenet_test.py with
+`vagrant@vagrant-ubuntu-trusty-32:/vagrant/tournament$ python tournament_test.py`
 
-Build and access the database with
-vagrant=> \i tournament.sql
-
-Quit psql with 
-tournament-> \q
-
-Run the test script:
-This code comes with a test script tournamenet_test.py that checks the database created with tournament.sql and the functions created in tournament.py.
-vagrant@vagrant-ubuntu-trusty-32:/vagrant/tournament$ python tournament_test.py
-
-Example of a 16 Player Swiss Tournament:
-First round pairing is by random draw. For example, with 16 players they would be matched into 8 random pairs for the first round. For now, assume all games have a winner, and there are no draws.
-After the first round, there will be a group of 8 players with a score of 1 (win), and a group of 8 players with a score of 0 (loss). For the 2nd round, players in each scoring group will be paired against each other � 1�s versus 1�s and 0�s versus 0�s.
-
-After round 2, there will be three scoring groups:
+## Example of a 16 Player Swiss Tournament:
+1. First round pairing is by random draw. For example, with 16 players they would be matched into 8 random pairs for the first round. For now, assume all games have a winner, and there are no draws.
+2. After the first round, there will be a group of 8 players with a score of 1 (win), and a group of 8 players with a score of 0 (loss). For the 2nd round, players in each scoring group will be paired against each other 1's versus 1's and 0's versus 0's.
+3. After round 2, there will be three scoring groups:
 4 players who have won both games and have 2 points
 8 players who have won a game and lost a game and have 1 point
 4 players who have lost both games and have no points.
-
-Again, for round 3, players are paired with players in their scoring group. After the third round, the typical scoring groups will be:
+4. Again, for round 3, players are paired with players in their scoring group. After the third round, the typical scoring groups will be:
 2 players who have won 3 games (3 points)
 6 players with 2 wins (2 points)
 6 players with 1 win (1 point)
 2 players with no wins (0 points)
-
-For the fourth (and in this case final) round, the process repeats, and players are matched with others in their scoring group. Note that there are only 2 players who have won all of their games so far � they will be matched against each other for the "championship" game. After the final round, we�ll have something that looks like this:
-1 player with 4 points � the winner!
-4 players with 3 points � tied for second place
+5. For the fourth (and in this case final) round, the process repeats, and players are matched with others in their scoring group. Note that there are only 2 players who have won all of their games so far they will be matched against each other for the "championship" game. After the final round, we'll have something that looks like this:
+1 player with 4 points the winner!
+4 players with 3 points tied for second place
 6 players with 2 points
 4 players with 1 point
 1 player with 0 points
