@@ -42,7 +42,7 @@ Download Vagrant: https://www.vagrantup.com/downloads.html
 This will give you a directory named **fullstack**. **Note:** you will want to paste the path you copied from step 3 into `PASTE_PATH_TO_REPO_HERE`.
 
 ### Run the Virtual Machine
-Using the terminal, change directory to fullstack/vagrant (`cd swisstournament/vagrant`), then type `vagrant up` to launch your virtual machine. 
+Using the terminal, change directory to fullstack/vagrant (`cd fullstack/vagrant`), then type `vagrant up` to launch your virtual machine. 
 
 Once it is up and running, type `vagrant ssh` to log into it. This will log your terminal in to the virtual machine, and you'll get a Linux shell prompt. When you want to log out, type exit at the shell prompt.  To turn the virtual machine off (without deleting anything), type vagrant halt. If you do this, you'll need to run vagrant up again before you can log into it.
 
